@@ -16,10 +16,10 @@
         </a>
         <nav>
             <ul>
-                <li><a href="ver_dojos.html">Dojos</a></li>
-                <li><a href="ver_sensei.html">Sensei</a></li>
-                <li><a href="ver_torneos.html">Torneos</a></li>
-                <li><a href="Iniciar_Sesion.html">Salir</a></li>
+                <li><a href="ver_dojos.php">Dojos</a></li>
+                <li><a href="ver_sensei.php">Sensei</a></li>
+                <li><a href="ver_torneos.php">Torneos</a></li>
+                <li><a href="Iniciar_Sesion.php">Salir</a></li>
             </ul>
         </nav>
     </header>
