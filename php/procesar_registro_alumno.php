@@ -1,5 +1,5 @@
 <?php
-// Verifica si el formulario se envió
+// Verifica si el formulario se envió lol
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     require "conexion.php"; // Incluir el archivo de conexión
 
