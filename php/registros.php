@@ -60,11 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     } else {
         // Inicio de sesión fallido
-        $logFile = fopen("error_log.log", "a");
-        $errorInfo = "Inicio de sesión fallido para la matrícula: " . $matricula . "\n";
-        fwrite($logFile, $errorInfo);
-        fclose($logFile);
-
+       
         header("Location: ../index.php"); // Redirige a la página de inicio de sesión con un mensaje de error
         
     }
