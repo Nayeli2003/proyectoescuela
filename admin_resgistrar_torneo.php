@@ -15,7 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TORNEOS</title>
     <link rel="stylesheet" type="text/css" href="Styles/Estilos_registro.css" media="screen" />
-
     <!--===================================================================
     plugins de CSS
     =======================================================================-->
@@ -47,8 +46,8 @@
         </a>
         <nav>
             <ul>
-                <li><a href="ver_torneos.html">Volver</a></li>
-                <li><a href="Iniciar_Sesion.html">Salir</a></li>
+                <li><a href="ver_torneos.php">Volver</a></li>
+                <li><a href="Iniciar_Sesion.php">Salir</a></li>
             </ul>
         </nav>
     </header>

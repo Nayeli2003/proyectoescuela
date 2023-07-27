@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENSEI</title>
-    <link rel="stylesheet" type="text/css" href="Styles/estilos_ver_sensei.css" media="screen" />
+    <title>TORNEOS</title>
+    <link rel="stylesheet" type="text/css" href="Styles/estilos_ver_torneos.css" media="screen" />
 
     <!--===================================================================
     plugins de CSS
@@ -32,17 +32,16 @@
 </head>
 
 <body>
-    
+
     <header id="main-header">
         <a id="logo-header" href="">
-            <span class="site-name"><img src="Img/Sin título_preview_rev_1.png"></span>        </a>
+            <span class="site-name"><img src="Img/Sin título_preview_rev_1.png"></span></a>
 
-        
         <nav>
             <ul>
-                <li><a href="admin_registrar_sensei_.html">Registrar</a></li>
-                <li><a href="admin.html">Volver</a></li>
-                <li><a href="Iniciar_Sesion.html">Salir</a></li>
+                <li><a href="admin_resgistrar_torneo.php">Registrar</a></li>
+                <li><a href="admin.php">Volver</a></li>
+                <li><a href="Iniciar_Sesion.php">Salir</a></li>
             </ul>
         </nav>
     </header>
@@ -57,27 +56,32 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
+                        <th>Categoria</th>
+                        <th>Nombre Participantes</th>
                         <th>ID Dojo</th>
-                        <th>Nombre</th>
-                        <th>Matricula</th>
+                        <th>E-mail</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>John</td>
                         <td>Doe</td>
+                        <td>6528173</td>
                         <td>john@example.com</td>
                     </tr>
                     <tr>
                         <td>Mary</td>
                         <td>Moe</td>
-                        <td>mary@example.com</td>
+                        <td>6528173</td>
+                        <td>john@example.com</td>
                     </tr>
                     <tr>
                         <td>July</td>
                         <td>Dooley</td>
-                        <td>july@example.com</td>
+                        <td>6528173</td>
+                        <td>john@example.com</td>
                     </tr>
+                    
                 </tbody>
             </table>
         </div>
