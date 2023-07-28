@@ -39,7 +39,6 @@
         </a>
         <nav>
             <ul>
-                <li><a href="sensei_inscribir_alum_torneo.php">Inscribir</a></li>
                 <li><a href="sensei.php">Volver</a></li>
                 <li><a href="Iniciar_Sesion.php">Salir</a></li>
             </ul>
@@ -53,6 +52,7 @@
     =====================================================================-->
     <div class="container mt-4">
         <h1>Tabla de Torneos</h1>
+        <a href="sensei_inscribir_alum_torneo.php" class="btn btn-success mb-2"><i class="fas fa-plus"></i> Registrar</a>
         <table class="table table-bordered table-hover">
             <thead class="table-light">
                 <tr>
@@ -85,8 +85,8 @@
                         echo "<td>" . $fila['matricula'] . "</td>";
                         echo "<td>" . $fila['id_admin'] . "</td>";
                         echo '<td>';
-                        echo '<a href="editar_torneo.php?id_torneo=' . $fila['id_torneo'] . '" class="btn btn-primary btn-sm">Editar</a> ';
-                        echo '<a href="eliminar_torneo.php?id_torneo=' . $fila['id_torneo'] . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i>Eliminar</a>';
+                        echo '<a href="editar_torneo.php?id_torneo=' . $fila['id_torneo'] . '" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>';
+                        echo '<a href="eliminar_torneo.php?id_torneo=' . $fila['id_torneo'] . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>';
                         echo '</td>';
                         echo "</tr>";
 
@@ -150,6 +150,8 @@
                         echo '       </div>';
                         echo '   </div>';
                         echo '</div>';
+
+                        
                     }
                 } else {
                     echo "<tr><td colspan='7'>No se encontraron datos en la tabla TORNEO.</td></tr>";

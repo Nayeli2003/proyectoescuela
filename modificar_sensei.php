@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modificar SENSEI</title>
 </head>
+
 <body>
     <?php
     require "php/conexion.php"; // Incluir el archivo de conexión
@@ -25,18 +27,18 @@
             $sensei = $resultado->fetch_assoc();
 
             // Mostrar el formulario con los datos del SENSEI cargados para su edición
-            ?>
+    ?>
             <h1>Editar SENSEI</h1>
             <form action="actualizar_sensei.php" method="post">
                 <input type="hidden" name="id_sensei" value="<?php echo $sensei['id_sensei']; ?>">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" value="<?php echo $sensei['nombre_sensei']; ?>" required>
+                <input type="text" name="nombre_sensei" id="nombre" value="<?php echo $sensei['nombre_sensei']; ?>" required>
 
                 <label for="apaterno">Apellido Paterno</label>
-                <input type="text" name="apaterno" id="apaterno" value="<?php echo $sensei['apaterno_sensei']; ?>" required>
+                <input type="text" name="apaterno_sensei" id="apaterno" value="<?php echo $sensei['apaterno_sensei']; ?>" required>
 
                 <label for="amaterno">Apellido Materno</label>
-                <input type="text" name="amaterno" id="amaterno" value="<?php echo $sensei['amaterno_sensei']; ?>" required>
+                <input type="text" name="amaterno_sensei" id="amaterno" value="<?php echo $sensei['amaterno_sensei']; ?>" required>
 
                 <label for="numero_tel">Número Telefónico</label>
                 <input type="number" name="numero_tel" id="numero_tel" value="<?php echo $sensei['numero_tel']; ?>" required>
@@ -54,7 +56,7 @@
 
                 <input type="submit" name="submit" value="Actualizar">
             </form>
-            <?php
+    <?php
         } else {
             echo "SENSEI no encontrado.";
         }
@@ -67,4 +69,5 @@
     $conn->close();
     ?>
 </body>
+
 </html>

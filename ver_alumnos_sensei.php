@@ -68,9 +68,9 @@
                     echo "<td>" . $fila['clasificacion'] . "</td>";
                     echo "<td>" . $fila['id_sensei'] . "</td>";
                     echo '<td>';
-                    echo '<a href="editar_alumno.php?matricula=' . $fila['matricula'] . '" class="btn btn-primary btn-sm">Editar</a> ';
-                    echo '<a href="eliminar_alumno.php?matricula=' . $fila['matricula'] . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i>Eliminar</a>';
-                    
+                    echo '<a href="editar_alumno.php?matricula=' . $fila['matricula'] . '" class="btn btn-primary btn-sm mr-2"><i class="fas fa-pencil-alt"></i></a> ';
+                    echo '<a href="eliminar_alumno.php?matricula=' . $fila['matricula'] . '" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>';
+
                     echo '</td>';
                     echo "</tr>";
 

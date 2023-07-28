@@ -1,0 +1,17 @@
+<?php
+require "conexion.php";
+
+// Consulta los datos de la tabla SENSEI
+$sql = "SELECT * FROM SENSEI";
+$resultado = $conn->query($sql);
+
+// Verifica si hay resultados y devuelve el resultado para su uso en el archivo ver_senseis.php
+if ($resultado && $resultado->num_rows > 0) {
+    // El resultado se utilizará en el archivo ver_senseis.php para mostrar los datos en la tabla
+    // Por lo tanto, no es necesario cerrar la conexión aquí.
+    // El resultado se liberará y la conexión se cerrará en ver_senseis.php después de usarlo.
+} else {
+    // Si no hay resultados, puedes manejarlo aquí según tus necesidades.
+    echo "No se encontraron datos en la tabla SENSEI.";
+}
+?>

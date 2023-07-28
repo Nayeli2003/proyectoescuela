@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +39,6 @@
 
         <nav>
             <ul>
-                <li><a href="admin_resgistrar_torneo.php">Registrar</a></li>
                 <li><a href="admin.php">Volver</a></li>
                 <li><a href="Iniciar_Sesion.php">Salir</a></li>
             </ul>
@@ -51,41 +50,76 @@
     <!--================================================================
     Contenido
     =====================================================================-->
-    <div class="container">
-        <div class="container py-5">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Categoria</th>
-                        <th>Nombre Participantes</th>
-                        <th>ID Dojo</th>
-                        <th>E-mail</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>6528173</td>
-                        <td>john@example.com</td>
-                    </tr>
-                    <tr>
-                        <td>Mary</td>
-                        <td>Moe</td>
-                        <td>6528173</td>
-                        <td>john@example.com</td>
-                    </tr>
-                    <tr>
-                        <td>July</td>
-                        <td>Dooley</td>
-                        <td>6528173</td>
-                        <td>john@example.com</td>
-                    </tr>
+    <div class="container mt-4">
+        <h1>Tabla de Torneo Administrador</h1>
+        <a href="admin_resgistrar_torneo.php" class="btn btn-success mb-2"><i class="fas fa-plus"></i> Registrar</a>
+        <table class="table table-bordered table-hover">
+            <thead class="table-light">
+                <tr>
+                    <th>ID Torneo Administrador</th>
+                    <th>Categoría</th>
+                    <th>Fecha de Inicio</th>
+                    <th>Fecha de Fin</th>
+                    <th>ID Administrador</th>
+                    <th>ID Dojo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                require "php/conexion.php"; // Incluir el archivo de conexión
+
+                // Consulta los datos de la tabla TORNEO_ADM
+                $sql = "SELECT * FROM TORNEO_ADM";
+                $resultado = $conn->query($sql);
+
+                while ($fila = $resultado->fetch_assoc()) {
+                    echo '<tr>';
+                    echo '<td>' . $fila['id_torneo_adm'] . '</td>';
+                    echo '<td>' . $fila['categoria'] . '</td>';
+                    echo '<td>' . $fila['fecha_inicio'] . '</td>';
+                    echo '<td>' . $fila['fecha_fin'] . '</td>';
+                    echo '<td>' . $fila['id_admin'] . '</td>';
+                    echo '<td>' . $fila['id_dojo'] . '</td>';
+                    echo '<td class="d-flex">';
+                    // Botón "Editar" con ícono de lápiz
+                    echo '<a href="editar_torneo_adm.php?id_torneo_adm=' . $fila['id_torneo_adm'] . '" class="btn btn-primary btn-sm mr-2"><i class="fas fa-pencil-alt"></i></a>';
+                    // Botón "Eliminar" con ícono de papelera
+                    echo '<a href="eliminar_torneo_adm.php?id_torneo_adm=' . $fila['id_torneo_adm'] . '" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>';
+                    echo '</td>';
+                    echo '</tr>';
+
+                    // Modal para eliminar el torneo
+                    echo '<div class="modal fade" id="eliminarModal' . $fila['id_torneo_adm'] . '" tabindex="-1" role="dialog" aria-labelledby="eliminarModalLabel' . $fila['id_torneo_adm'] . '" aria-hidden="true">';
+                    echo '<div class="modal-dialog" role="document">';
+                    echo '<div class="modal-content">';
+                    echo '<div class="modal-header">';
+                    echo '<h5 class="modal-title" id="eliminarModalLabel' . $fila['id_torneo_adm'] . '">Eliminar Torneo</h5>';
+                    echo '<button type="button" class="close" data-dismiss="modal" aria-label="Close">';
+                    echo '<span aria-hidden="true">&times;</span>';
+                    echo '</button>';
+                    echo '</div>';
+                    echo '<div class="modal-body">';
+                    echo '<p>¿Estás seguro de que deseas eliminar este torneo?</p>';
+                    echo '</div>';
+                    echo '<div class="modal-footer">';
+                    echo '<form action="eliminar_torneo_adm.php" method="post">';
+                    echo '<input type="hidden" name="id_torneo" value="' . $fila['id_torneo_adm'] . '">';
+                    echo '<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>';
+                    echo '<button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i> Eliminar</button>';
+                    echo '</form>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+
                     
-                </tbody>
-            </table>
-        </div>
+                }
+                ?>
+            </tbody>
+        </table>
     </div>
+
 </body>
 
 </html>

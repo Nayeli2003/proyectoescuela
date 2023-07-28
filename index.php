@@ -121,22 +121,15 @@
 
     <h2>Contacto</h2>
 
-    <form action="#" target="" method="get" name="formDatosPersonales">
+    <form action="php/registros.php" method="post" name="formDatosPersonales">
 
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" />
+        <label for="matricula">Matricula</label>
+        <input type="text" name="matricula" id="matricula" placeholder="Matricula" required />
 
-        <label for="apellidos">Apellidos</label>
-        <input type="text" name="apellidos" id="apellidos" placeholder="1r Apellido" />
+        <label for="password">Contraseña</label>
+        <input type="password" name="contraseña" id="password" placeholder="Escribe tu Contraseña" required />
 
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="email" required />
-
-        <label for="mensaje">Mensaje</label>
-        <textarea name="mensaje" for="mensaje" placeholder="describe brevemente en menos de 300 carácteres"
-            maxlength="300"></textarea>
-
-        <input type="submit" name="enviar" value="enviar datos" />
+        <input type="submit" name="enviar" value="ENTRAR" />
     </form>
     </form>
 

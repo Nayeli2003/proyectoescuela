@@ -53,19 +53,38 @@
     </header>
     <br><br><br>
 
-    <form action="#" target="" method="get" name="formDatosPersonales">
+    <div class="container mt-4">
+    <h1>Registrar Nuevo Torneo Administrador</h1>
+    <form action="php/procesar_registro_torneo_adm.php" method="post">
+        <label for="id_torneo_adm">ID Torneo Administrador:</label>
+        <input type="number" name="id_torneo_adm" id="id_torneo_adm" required />
 
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" />
+        <label for="categoria">Categoría:</label>
+        <select name="categoria" required>
+            <option value="Categoria menor de edad">4-8 años cinta blanca - blanca y naranja</option>
+            <option value="Categoria menor de edad">9-12 años cinta amarilla - naranja</option>
+            <option value="Categoria menor de edad">13-18 años cinta verde - azul</option>
+            <option value="Categoria mayor de edad">18-22 años cinta cafe peso 70Kg - 80Kg</option>
+            <option value="Categoria mayor de edad">23-26 años cinta cafe - negro peso 80Kg - 90Kg</option>
+            <option value="Categoria mayor de edad">27-30 años cinta negra peso 85Kg - 95Kg</option>
+            <!-- Agrega más opciones según tus necesidades -->
+        </select>
 
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Email" required />
+        <label for="fecha_inicio">Fecha de inicio:</label>
+        <input type="date" name="fecha_inicio" id="fecha_inicio" required />
 
-        <label for="password">Contraseña </label>
-        <input type="password" name="password" id="password" placeholder="Escribe tu Contraseña" />
+        <label for="fecha_fin">Fecha de fin:</label>
+        <input type="date" name="fecha_fin" id="fecha_fin" required />
+
+        <label for="id_admin">ID Administrador:</label>
+        <input type="number" name="id_admin" id="id_admin" required />
+
+        <label for="id_dojo">ID Dojo:</label>
+        <input type="number" name="id_dojo" id="id_dojo" required />
 
         <input type="submit" name="enviar" value="ENTRAR" />
     </form>
+</div>
 
     <footer>
         Copyright &copy; 2023 Karate-Soul - Todos los derechos reservados

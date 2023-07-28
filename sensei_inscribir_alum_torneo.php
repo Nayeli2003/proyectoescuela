@@ -67,9 +67,9 @@
                 <option value="Categoria menor de edad">4-8 años cinta blanca - blanca y naranja</option>
                 <option value="Categoria menor de edad">9-12 años cinta amarilla - naranja</option>
                 <option value="Categoria menor de edad">13-18 años cinta verde - azul</option>
-                <option value="Categoria meyor de edad">18-22 años cinta cafe peso 70Kg - 80Kg</option>
-                <option value="Categoria meyor de edad">23-26 años cinta cafe - negro peso 80Kg - 90Kg</option>
-                <option value="Categoria meyor de edad">27-30 años cinta negra peso 85Kg - 95Kg</option>
+                <option value="Categoria mayor de edad">18-22 años cinta cafe peso 70Kg - 80Kg</option>
+                <option value="Categoria mayor de edad">23-26 años cinta cafe - negro peso 80Kg - 90Kg</option>
+                <option value="Categoria mayor de edad">27-30 años cinta negra peso 85Kg - 95Kg</option>
                 <!-- Agrega más opciones según tus necesidades -->
             </select>
             <label for="fecha_inicio">Fecha de Inicio:</label>

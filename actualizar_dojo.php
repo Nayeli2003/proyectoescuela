@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         if ($stmt->execute()) {
             // Actualización exitosa, redirige a la página de ver dojo
-            header("Location: ver_dojo.php");
+            header("Location: ver_dojos.php");
             exit();
         } else {
             // Error al ejecutar la consulta
