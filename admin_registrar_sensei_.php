@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REGISTRAR</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="es">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,30 +39,47 @@
         </a>
         <nav>
             <ul>
-                <li><a href="ver_torneos.php">Volver</a></li>
+                <li><a href="ver_sensei.php">Volver</a></li>
                 <li><a href="Iniciar_Sesion.php">Salir</a></li>
             </ul>
         </nav>
     </header>
     <br><br><br>
 
-    <form action="#" target="" method="get" name="formDatosPersonales">
+    <div class="container mt-4">
+        <h1>Registrar Nuevo Sensei</h1>
+        <form action="php/procesar_registro_sensei.php" method="post">
+            <label for="id_sensei">ID Sensei</label>
+            <input type="number" name="id_sensei" id="id_sensei" required />
 
-        <label for="nombre">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" />
+            <label for="nombre_sensei">Nombre</label>
+            <input type="text" name="nombre_sensei" id="nombre_sensei" required />
 
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="Email" required />
+            <label for="apaterno_sensei">Apellido Paterno</label>
+            <input type="text" name="apaterno_sensei" id="apaterno_sensei" required />
 
-        <label for="password">Contraseña </label>
-        <input type="password" name="password" id="password" placeholder="Escribe tu Contraseña" />
+            <label for="amaterno_sensei">Apellido Materno</label>
+            <input type="text" name="amaterno_sensei" id="amaterno_sensei" required />
 
-        <input type="submit" name="enviar" value="ENTRAR" />
-    </form>
+            <label for="numero_tel">Número Telefónico</label>
+            <input type="number" name="numero_tel" id="numero_tel" required />
 
+            <label for="contraseña">Contraseña</label>
+            <input type="password" name="contraseña" id="contraseña" required />
+
+            <label for="id_dojo">ID Dojo</label>
+            <input type="number" name="id_dojo" id="id_dojo" required />
+
+            <label for="id_admin">ID Administrador</label>
+            <input type="number" name="id_admin" id="id_admin" required />
+
+            <input type="submit" name="enviar" value="ENTRAR" />
+        </form>
+    </div>
     <footer>
         Copyright &copy; 2023 Karate-Soul - Todos los derechos reservados
     </footer>
-</html>
+
 </body>
+
 </html>

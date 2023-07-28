@@ -85,11 +85,19 @@
                         echo "<td>" . $fila['estado'] . "</td>";
                         echo "<td>" . $fila['municipio'] . "</td>";
                         echo "<td>" . $fila['numero_tel'] . "</td>";
-                        echo "<td>";
-                        echo "<a href='modificar_dojo.php?id_dojo=" . $fila['id_dojo'] . "' class='btn btn-primary mr-2'>Modificar</a>";
-                        echo "<a href='eliminar_dojo.php?id_dojo=" . $fila['id_dojo'] . "' class='btn btn-danger'>Eliminar</a>";
-                        echo "</td>";
-                        echo "</tr>";
+                        echo '<td>';
+
+                        // Botón con ícono de lápiz (para editar)
+                        echo '<a href="modificar_dojo.php?id_dojo=' . $fila['id_dojo'] . '" class="btn btn-primary btn-smaller mr-2">';
+                        echo '<i class="fas fa-pencil-alt"></i></a>';
+
+                        // Botón con ícono de basura (para eliminar)
+                        echo '<a href="eliminar_dojo.php?id_dojo=' . $fila['id_dojo'] . '" class="btn btn-danger btn-smaller">';
+                        echo '<i class="fas fa-trash-alt"></i></a>';
+
+                        echo '</td>';
+
+                        echo '</tr>';
 
                         // Modal para eliminar el DOJO
                         echo '<div class="modal fade" id="eliminarModal' . $fila['id_dojo'] . '" tabindex="-1" role="dialog" aria-labelledby="eliminarModalLabel' . $fila['id_dojo'] . '" aria-hidden="true">';
